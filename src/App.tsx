@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import View from "./pages/View";
+import { Route, Routes } from "react-router-dom";
+import "./config";
+import { useContext, useEffect } from "react";
+import Context from "./store";
+import Header from "./partials/Header";
+import Footer from "./partials/Footer";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { store } = useContext(Context);
+	useEffect(() => console.log(store), [store]);
+	return (
+		<div className="flex flex-col min-h-screen overflow-hidden">
+			<Header />
+			<main className="flex-grow mt-12">
+				<Routes>
+					<Route path="/:certificateId" element={<View />} />
+				</Routes>
+				<Footer />
+			</main>
+		</div>
+	);
 }
 
 export default App;
