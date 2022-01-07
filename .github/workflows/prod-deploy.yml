@@ -47,5 +47,4 @@ jobs:
           args: deploy --only hosting --message \"${{ github.event.head_commit.message }}\"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          PROJECT_ID: certify-4bf9a
-          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          PROJECT_ID: certwise-verify
