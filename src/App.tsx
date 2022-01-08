@@ -7,19 +7,19 @@ import Context from "./store";
 import Header from "./partials/Header";
 import Footer from "./partials/Footer";
 function App() {
-	const { store } = useContext(Context);
-	useEffect(() => console.log(store), [store]);
-	return (
-		<div className="flex flex-col min-h-screen overflow-hidden">
-			<Header />
-			<main className="flex-grow mt-12">
-				<Routes>
-					<Route path="/:certificateId" element={<View />} />
-				</Routes>
-				<Footer />
-			</main>
-		</div>
-	);
+  const { store } = useContext(Context);
+  useEffect(() => console.log(store), [store]);
+  return (
+    <div className="flex flex-col min-h-screen overflow-hidden">
+      <Header />
+      <main className="flex-grow mt-20">
+        <Routes>
+          <Route path="/:certificateId" element={<View />} />
+        </Routes>
+        <Footer />
+      </main>
+    </div>
+  );
 }
 
 export default App;
