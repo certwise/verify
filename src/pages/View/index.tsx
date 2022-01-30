@@ -8,7 +8,7 @@ function View() {
   const { certificateId } = useParams();
   const certificate = useGetCertificate(certificateId as string);
   return (
-    <div className="bg-gray-50 px-5 md:px-8 lg:px-12 xl:px-24 py-5 md:py-16 lg:py-16 xl:py-16">
+    <div className="bg-gray-100 px-5 md:px-8 lg:px-12 xl:px-24 py-5 md:py-10">
       {!certificate.isLoading ? (
         <>
           <Section1 />
