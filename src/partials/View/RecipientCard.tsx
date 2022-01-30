@@ -12,7 +12,7 @@ function RecipientCard() {
         <img
           src={recipientImage}
           alt="rec"
-          className="shadow-xl rounded-full border-2 border-gray-200 h-16 text-xs w-16 text-center"
+          className="shadow-lg rounded-full border-2 border-gray-200 h-16 text-xs w-16 text-center"
         />
         <div className="ml-2 ">
           <div className="font-bold text-blue-500 ml-2">
